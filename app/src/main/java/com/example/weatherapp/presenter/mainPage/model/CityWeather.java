@@ -1,9 +1,17 @@
 package com.example.weatherapp.presenter.mainPage.model;
 
 public class CityWeather {
+
     private int cityId;
+
     private String cityName;
+
     private Double temperature;
+
+    private String timestamp;
+
+    public CityWeather() {
+    }
 
     public CityWeather(int cityId, String cityName, Double temperature) {
         this.cityId = cityId;
@@ -34,4 +42,14 @@ public class CityWeather {
     public void setCityId(int cityId) {
         this.cityId = cityId;
     }
+
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
+
+
 }

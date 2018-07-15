@@ -47,6 +47,7 @@ public class MainPresenterImpl implements MainPresenter {
                 .filter(s -> s.length() >= MIN_LENGTH_TO_START)
                 .observeOn(Schedulers.io())
                 .switchMap(s -> {
+                    view.onStartSearch(s);
                     List<CityWeather> similarCities = getSimilarCities(s);
                     StringBuilder id = new StringBuilder();
                     for (CityWeather obj : similarCities) {

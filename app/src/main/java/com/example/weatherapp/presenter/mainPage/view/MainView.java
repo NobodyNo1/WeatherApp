@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface MainView {
     void onDataLoaded(List<CityWeather> data);
+    void onStartSearch(String query);
 }
